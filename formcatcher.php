@@ -4,5 +4,5 @@
   $say = htmlspecialchars($_POST['username']);
 
 
-  echo 'Username:';
+  echo 'Username:', $say;
 ?>
