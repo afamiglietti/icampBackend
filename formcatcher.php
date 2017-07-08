@@ -11,4 +11,10 @@
 
   echo $apiURL;
   echo $my_var;
+
+  $decoded = json_decode($my_var);
+  foreach ($decoded as $key => $value) {
+    echo $key;
+    echo $value;
+  }
 ?>
