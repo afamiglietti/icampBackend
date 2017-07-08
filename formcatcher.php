@@ -2,7 +2,7 @@
   // The global $_POST variable allows you to access the data sent with the POST method by name
   // To access the data sent with the GET method, you can use $_GET
 
-  $categories = htmlspecialchars($_POST['cats']);
+  $categories = htmlspecialchars($_POST['say']);
 
   //$apiString = "WHERE Category IN ('" . $categories . "')";
   //$apiURL = urlencode($apiString);
