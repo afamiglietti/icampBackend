@@ -3,15 +3,32 @@
 <head>
   <title>Testing iCamp Backend</title>
   <meta charset="utf-8">
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-  <form id="myForm" name="myForm" method="post" action="formcatcher.php">
+  <form id="myForm" name="myForm">
     <div>
-      <label for="username">Enter categories to search:</label>
-      <input type="text" id="username" name="username">
+      <label for="Category">Enter categories to search:</label>
+      <input type="text" id="Category" name="Category">
+    </div>
+    <div>
+      <label for "StartDate">Starting After</label>
+      <input type="date" id="StartDate" name="StartDate">
     </div>
   <input type="submit" value="Submit!">
-  </form>
+</form>
+
+<script type="text/javascript">
+$('#myForm').submit( function( event ) {
+  //alert("fired");
+  event.preventDefault();
+  var formArray = $(this).serializeArray();
+  formArray.forEach(function(field){
+    alert(field.name + ":" + field.value);
+  });
+
+});
+
+</script>
 </body>
 </html>

@@ -13,6 +13,7 @@
   echo $my_var;
 
   $decoded = json_decode($my_var);
+  echo $decoded;
   foreach ($decoded['rows'] as $value) {
     echo $value;
   }

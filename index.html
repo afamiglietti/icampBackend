@@ -8,21 +8,9 @@
 <body>
 <div id="resultsDiv">
 </div>
-<a href="javascript:void(0);" class="loadButton">Load some stuff</a>
-<script type="text/javascript">
-$('.loadButton').click(function() {
-  $.getJSON("https://www.googleapis.com/fusiontables/v2/query?sql=SELECT+ROWID%2C+Name%2C+Description+FROM+1Iw9qt8__F6E8RB53bbflrGAt3eI4GS3StvcF1o-I%20WHERE%20Category=%27sports%27%20&key=AIzaSyBYdqXls8CORbjl1yVC53qZ-75pMJaCmJY", function(data){
-    var rows = [];
-    $.each( data['rows'], function(key, val) {
-      rows.push("<li>" + val[1] + "</li>");
-    });
-    var list = $( "<ul/>", {
-    "class": "my-new-list",
-    html: rows.join( "" )
-  })
-    $('#resultsDiv').html(list);
-  });
-});
-</script>
+<h1>Game in a frame</h1>
+<iframe src="https://icamp2017.afamiglietti.org/PabloC_Game/" width="500px">
+  It's not working
+</iframe>
 </body>
 </html>
